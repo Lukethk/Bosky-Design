@@ -1,0 +1,234 @@
+<!DOCTYPE h<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Bosky Design - Catálogo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .navbar {
+            background-color: #474747;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 70px;
+            margin-right: 9px;
+            border-radius: 50%;
+        }
+
+        .logo h1 {
+            font-family: 'Dancing Script', cursive;
+            margin: 0;
+            color: white;
+            font-size: 1.6em;
+        }
+
+        .categorias a {
+            margin: 0 7px;
+            text-decoration: none;
+            color: #4CAF50;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+
+        .categorias a #boton-verde {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+        }
+
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 10px;
+            flex-wrap: nowrap;
+        }
+
+        .product {
+            flex: 0 1 calc(50% - 20px);
+            margin: 8px;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+            width: 45%; /* Ajusta el ancho según tu preferencia */
+        }
+
+        .product:hover {
+            transform: scale(1.05);
+        }
+
+        .product img {
+            width: 80%;
+            height: 300px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            object-fit: cover;
+        }
+
+        .price {
+            display: block;
+            font-size: 1.2em;
+            margin-top: 10px;
+            color: #333;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #f0c040;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #d4a034;
+        }
+
+        footer {
+            background-color: #232f3e;
+            color: #fff;
+            text-align: left;
+            padding: 5px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 1em;
+            height: 40px;
+        }
+
+        footer a {
+            color: #fff;
+            font-size: 1.em;
+            margin: 5px;
+        }
+
+        @media only screen and (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    .categorias {
+        margin-top: 10px;
+    }
+
+    footer {
+        padding: 10px;
+    }
+
+    .product {
+        width: 100%;
+        margin-bottom: 0px; /* Ajusta el espacio entre productos según tu preferencia */
+    }
+}
+        
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="logo">
+            <img src="https://scontent.fsrz1-1.fna.fbcdn.net/v/t39.30808-6/307034418_453674106780531_1799462553878883786_n.png?_nc_cat=105&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=uhlKImIBUXEAX87w9J1&_nc_ht=scontent.fsrz1-1.fna&oh=00_AfCP_vdPQR3dbt0XG4ZoHyzKoLk_Wco5xLFGtAOa9CyX_A&oe=657D5A41" alt="Logo">
+            <h1 style="font-family: 'Courier New', Courier, monospace;">Bosky Design</h1>
+        </div>
+
+        <div class="categorias">
+            <a href="Catalogo.html"><span id="boton-verde">Catálogo</span></a>
+            <a href="Guia.html"><span id="boton-verde">Guía</span></a>
+            <a href="#contacto"><span id="boton-verde">Contacto</span></a>
+        </div>
+    </div>
+
+    <section class="products">
+        <div class="product">
+            <img src="ma1.jpeg" alt="Mesa elegante">
+            <h2>Mesas</h2>
+            <p>Una mesa cómoda y elegante para tu hogar.</p>
+            <button onclick="redirectToWhatsApp('Mesas')">Cotizar</button>
+        </div>
+        
+        <div class="product">
+            <img src="ma2.jpeg" alt="Mesa de centro moderna">
+            <h2>Mesas</h2>
+            <p>Añade un toque contemporáneo a tu sala de estar.</p>
+            <button onclick="redirectToWhatsApp('Mesa de Centro Moderna')">Cotizar</button>
+        </div>
+
+        <div class="product">
+            <img src="ma3.jpeg" alt="Mesa elegante">
+            <h2>Mesas</h2>
+            <p>Una mesa cómoda y elegante para tu hogar.</p>
+            <button onclick="redirectToWhatsApp('Mesas')">Cotizar</button>
+        </div>
+        
+        <div class="product">
+            <img src="ma4.jpeg" alt="Mesa de centro moderna">
+            <h2>Mesas</h2>
+            <p>Añade un toque contemporáneo a tu sala de estar.</p>
+            <button onclick="redirectToWhatsApp('Mesa de Centro Moderna')">Cotizar</button>
+        </div>
+    </section>
+
+    <footer>
+        <div style="display: flex; gap: 10px;">
+            <a href="https://instagram.com/bosky_design?igshid=M2RkZGJiMzhjOQ==" target="_blank">
+                <i class="fa-brands fa-instagram" style="color: #6eb06d; font-size: 1.3em;"></i>
+            </a>
+           
+            <a href="https://wa.me/59162224477" target="_blank">
+                <i class="fa-brands fa-whatsapp" style="color: #6eb06d; font-size: 1.3em;"></i>
+            </a>
+            
+            <a href="https://www.facebook.com/bosky.scz?mibextid=LQQJ4d" target="_blank">
+                <i class="fa-brands fa-facebook" style="color: #6eb06d; font-size: 1.3em;"></i>
+            </a>
+        </div>
+        <p style="text-align: left;">&copy; Bosky Design 2023.</p>
+    </footer>
+
+    <script>
+        function redirectToWhatsApp(productName) {
+            var phoneNumber = '59162224477';
+            var message = '¡Hola! Estoy interesado en cotizar: ' ;
+            var whatsappLink = 'https://wa.me/' + phoneNumber + '?text=' + encodeURIComponent(message);
+            window.location.href = whatsappLink;
+        }
+    </script>
+</body>
+</html>

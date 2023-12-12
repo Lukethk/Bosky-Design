@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas Frecuentes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #474747;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 70px;
+            margin-right: 9px;
+            border-radius: 50%;
+        }
+
+        .logo h1 {
+            font-family: 'Dancing Script', cursive;
+            margin: 0;
+            color: white;
+            font-size: 1.6em;
+        }
+
+        .categorias a {
+            margin: 0 7px;
+            text-decoration: none;
+            color: #4CAF50;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+
+        .categorias a #boton-verde {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+        }
+
+        .preguntas-container {
+            text-align: center;
+            margin: 2em;
+        }
+
+        .pregunta {
+            cursor: pointer;
+            color: #474747; 
+            font-weight: bold;
+            font-size: 1em;
+            margin-bottom: 0.5em;
+            border: 1px solid #ddd; 
+            padding: 0.5em; 
+            display: inline-block; 
+            width: 100%; 
+            box-sizing: border-box; 
+            position: relative;
+        }
+
+        .pregunta:hover {
+            background-color: #f4f4f4;
+        }
+
+        .respuesta {
+            display: none;
+            margin: 0 0 1em;
+            color: #333;
+        }
+
+        .flecha {
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-bottom: 6px solid #474747; 
+            margin-right: 0.5em;
+            transition: transform 0.3s ease-in-out;
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+        }
+
+        .rotada {
+            transform: rotate(180deg);
+        }
+
+        footer {
+            background-color: #474747;
+            color: #333;
+            text-align: center;
+            padding: 10px; 
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .icono-red-social {
+            margin: 0 10px;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+        }
+
+        footer a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="https://scontent.fsrz4-1.fna.fbcdn.net/v/t39.30808-6/307034418_453674106780531_1799462553878883786_n.png?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_ohc=05ewcr408kcAX_3oEFZ&_nc_ht=scontent.fsrz4-1.fna&oh=00_AfAJkChzxIyKKXQizmBido5CghJm0N-N52ib-TmukRrF-Q&oe=65679981" alt="Logo">
+            <h1 style="font-family: 'Courier New', Courier, monospace;">Bosky Design</h1>
+        </div>
+
+        <div class="categorias">
+            <a href="Catalogo.html"><span id="boton-verde">Catálogo</span></a>
+            <a href="Guia.html"><span id="boton-verde">Guía</span></a>
+            <a href="#contacto"><span id="boton-verde">Contacto</span></a>
+        </div>
+    </div>
+
+    <div class="preguntas-container">
+        <div class="pregunta" onclick="toggleRespuesta('pregunta1')">
+            <span class="flecha" id="flecha1"></span>
+            ¿Cómo puedo realizar una cotización?
+        </div>
+        <div class="respuesta" id="pregunta1">Escríbenos por WhatsApp, envíanos una foto del modelo referencial del mueble que deseas, las medidas y si requieres algún tipo de madera en específico.</div>
+
+        <div class="pregunta" onclick="toggleRespuesta('pregunta2')">
+            <span class="flecha" id="flecha2"></span>
+            ¿Cuál es la forma de pago?
+        </div>
+        <div class="respuesta" id="pregunta2">Trabajamos con el 50% por adelantado, una vez esté especificado el pedido y detallado en el contrato privado que manejamos, y el otro 50% el día que recibe el mueble. Se aceptan transferencias, pagos QR y efectivo.</div>
+
+        <div class="pregunta" onclick="toggleRespuesta('pregunta3')">
+            <span class="flecha" id="flecha3"></span>
+            ¿En cuánto tiempo me entregan el mueble?
+        </div>
+        <div class="respuesta" id="pregunta3">Tenemos un margen de entrega entre 7-25 días hábiles. Todo dependiendo de la complejidad y dimensión del mueble.</div>
+    </div>
+
+    <footer>
+        <a href="https://instagram.com/bosky_design?igshid=M2RkZGJiMzhjOQ==" target="_blank">
+            <i class="fa-brands fa-instagram fa-bounce icono-red-social" style="color: #6eb06d;"></i>
+        </a>
+       
+        <a href="https://wa.me/59162224477" target="_blank">
+            <i class="fa-brands fa-whatsapp fa-bounce icono-red-social" style="color: #6eb06d;"></i>
+        </a>
+        
+        <a href="https://www.facebook.com/bosky.scz?mibextid=LQQJ4d" target="_blank">
+            <i class="fa-brands fa-facebook fa-bounce icono-red-social" style="color: #6eb06d;"></i>
+        </a>
+    </footer>
+
+    <script>
+        function toggleRespuesta(id) {
+            var respuesta = document.getElementById(id);
+            var flecha = document.getElementById('flecha' + id.substring(8));
+
+            if (respuesta.style.display === 'none' || respuesta.style.display === '') {
+                respuesta.style.display = 'block';
+                flecha.classList.add('rotada');
+            } else {
+                respuesta.style.display = 'none';
+                flecha.classList.remove('rotada');
+            }
+        }
+    </script>
+</body>
+</html>
